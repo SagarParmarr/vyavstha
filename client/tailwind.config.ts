@@ -1,15 +1,15 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         white: "#ffffff",
-         gray: {
+        gray: {
           100: "#f3f4f6",
           200: "#e5e7eb",
           300: "#d1d5db",
