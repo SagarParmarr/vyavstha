@@ -7,15 +7,14 @@
   box-sizing: border-box;
 }
 
-@layer base {
-  html,
-  body,
-  #root,
-  .app {
-    height: 100%;
-    width: 100%;
-    font-size: large;
-    background: gray;
-    color: #797979;
-  }
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+
+  @apply text-sm;
+  @apply bg-white;
+  @apply dark:bg-black;
 }
