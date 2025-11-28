@@ -1,4 +1,4 @@
-import { PrismaClient } from '../prisma/generated/prisma/default.js';
+import { prisma } from '../src/lib/prisma.js';
 import { Pool } from 'pg';
 import { PrismaPg } from '@prisma/adapter-pg';
 import fs from 'fs';
@@ -11,7 +11,6 @@ const __dirname = path.dirname(__filename);
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const adapter = new PrismaPg(pool);
-const prisma = new PrismaClient({ adapter });
 
 async function deleteAllData(orderedFileNames: string[]) {
   try {
