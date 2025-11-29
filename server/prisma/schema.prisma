@@ -62,7 +62,7 @@ model Task {
   assignedUserId  Int?
   attachments     Attachment[]
   comments        Comment[]
-  assigned        User?            @relation("TaskAssignee", fields: [assignedUserId], references: [userId])
+  assignee        User?            @relation("TaskAssignee", fields: [assignedUserId], references: [userId])
   author          User             @relation("TaskAuthor", fields: [authorUserId], references: [userId])
   project         Project          @relation(fields: [projectId], references: [id])
   taskAssignments TaskAssignment[]
